@@ -1,0 +1,56 @@
+{
+  "name": "@ingicare/ingit",
+  "version": "1.0.0",
+  "description": "Creates a maintenance branch in the current git repository",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && tsc -p src && cp package.json build/",
+    "start": "npm run build && tsc -p src -w",
+    "test": "nyc mocha --recursive --require ts-node/register 'test/**/*.ts'",
+    "watch-test": "mocha --watch --watch-extensions ts --recursive --require ts-node/register 'test/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "Djordje Lukic <dlukic@ingicare.com>",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "minimist": "^1.2.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/chai": "*",
+    "@types/colors": "*",
+    "@types/commander": "*",
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "@types/sinon": "*",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.d.ts",
+      "node_modules",
+      "build"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "all": true,
+    "sourceMap": true
+  }
+}

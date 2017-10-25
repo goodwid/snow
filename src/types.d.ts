@@ -1,5 +1,12 @@
-declare module 'node-pom-parser';
+interface SnowConfig {
+  widget: {
+    $: WidgetAtr
+  };
+}
 
-interface IngitConfig {
-  pom: string;
+interface WidgetAtr {
+    id: string,
+    version: string,
+    xmlns: string,
+    'xmlns:cdv': string
 }
