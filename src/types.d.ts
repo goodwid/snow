@@ -1,5 +1,14 @@
-declare module 'node-pom-parser';
-
-interface IngitConfig {
-  pom: string;
+interface SnowConfig {
+  widget: {
+    $: WidgetAtr
+  };
 }
+
+interface WidgetAtr {
+    id: string,
+    version: string,
+    xmlns: string,
+    'xmlns:cdv': string
+}
+
+declare module '*.json';

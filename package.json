@@ -1,0 +1,70 @@
+{
+  "name": "@ingicare/snow",
+  "version": "1.0.0",
+  "description": "Updates the package id and/or the version in a cordova mobile repo",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p src && cp package.json dist/",
+    "start": "npm run build && tsc -p src -w",
+    "test": "nyc mocha --recursive --require ts-node/register 'test/**/*.ts'",
+    "watch-test": "mocha --watch --watch-extensions ts --recursive --require ts-node/register 'test/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "Maryam Louati <mlouati@ingicare.com>",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "semver": "^5.4.1",
+    "xml2js": "^0.4.19"
+  },
+  "bin": {
+    "snow": "index.js"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.ingicare.com/repository/npm-internal/"
+  },
+  "devDependencies": {
+    "@types/chai": "*",
+    "@types/chai-as-promised": "*",
+    "@types/colors": "*",
+    "@types/commander": "*",
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "@types/semver": "*",
+    "@types/sinon": "*",
+    "@types/tmp": "0.0.33",
+    "@types/xml2js": "*",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",    
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.1",
+    "tmp": "0.0.33",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.d.ts",
+      "src/commands",
+      "src/index.ts",
+      "node_modules",
+      "dist"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "all": true,
+    "sourceMap": true
+  }
+}
