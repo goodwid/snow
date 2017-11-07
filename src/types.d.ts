@@ -10,3 +10,5 @@ interface WidgetAtr {
     xmlns: string,
     'xmlns:cdv': string
 }
+
+declare module '*.json';

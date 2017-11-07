@@ -1,40 +1,30 @@
-const minimist = require('minimist');
-const config = require('./lib/configxml');
+import * as fs from 'fs';
+import * as path from 'path';
 
-let argv = minimist(process.argv.slice(2), {
-  alias: {
-    v: 'version',
-    pkg: 'package'
-  }
-});
+import * as commander from 'commander';
 
+import * as pack from './package.json';
 
-if (argv.v && argv.pkg) {
-  applyVersion(argv.v)
-    .then(() => applyPackage(argv.pkg))
-} else {
-  if (argv.v) {
-    applyVersion(argv.v)
-  }
+export function commandLoader(program: any) {
+  const commands: any = {};
+  const loadPath = path.join(path.dirname(__filename), 'commands');
 
-  if (argv.pkg) {
-    applyPackage(argv.pkg)
-  }
+  // Loop though command files
+  fs.readdirSync(loadPath).filter(function (filename: string) {
+    return (/\.js$/.test(filename));
+  }).forEach(function (filename: string) {
+    const name = filename.substr(0, filename.lastIndexOf('.'));
+    const command = require(path.join(loadPath, filename));
+
+    commands[name] = command.cmd(program);
+  });
+
+  return commands;
 }
 
+commandLoader(commander);
 
-function applyVersion(v: string): Promise<void> {
-  return config
-    .version(v)
-    .then(() => {
-      console.log(`config.xml updated with new version ${v}`)
-    });
-}
-
-function applyPackage(pkg: string): Promise<void> {
-  return config
-    .package(pkg)
-    .then(() => {
-      console.log(`config.xml updated with new version ${pkg}`)
-    });
-}
+commander
+  .usage('<command> [options]')
+  .version(pack.version)
+  .parse(process.argv);
