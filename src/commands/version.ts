@@ -15,7 +15,7 @@ export function cmd(program: any) {
 
       try {
         await updateVersion(version, dir);
-        console.log(colors.gray('You are ready to go !\nThe config.xml was updated with new version ') + colors.rainbow(version))
+        console.log(colors.green('You are ready to go !\nThe config.xml was updated with new version ') + colors.rainbow(version))
       } catch (e) {
         console.log(colors.red.bold(e.message));
       }
