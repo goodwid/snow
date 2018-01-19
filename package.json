@@ -29,10 +29,11 @@
     "@types/colors": "*",
     "@types/commander": "*",
     "@types/mocha": "*",
-    "@types/node": "*",
+    "@types/node": "6.0.96",
     "@types/semver": "*",
     "@types/sinon": "*",
     "@types/tmp": "0.0.33",
+    "@types/util.promisify": "*",
     "@types/xml2js": "*",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
@@ -41,7 +42,8 @@
     "sinon": "^4.0.1",
     "tmp": "0.0.33",
     "ts-node": "^3.3.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.5.3",
+    "util.promisify": "^1.0.0"
   },
   "nyc": {
     "include": [

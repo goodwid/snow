@@ -4,7 +4,8 @@ import * as semver from 'semver';
 
 import { parse, write } from './xml';
 
-export const configNotFoundError = 'config.xml NOT FOUND !\nTry to run the command from a cordova dir containing config.xml or run the help command to learn more on how specify the path to this directory';
+export const configNotFoundError = `config.xml NOT FOUND !\nTry to run the command from a cordova dir containing
+ config.xml or run the help command to learn more on how specify the path to this directory`;
 
 export async function updateVersion(version: string, directory: string) {
   if (!configExists(directory)) {
@@ -17,7 +18,7 @@ export async function updateVersion(version: string, directory: string) {
 
   if (semver.prerelease(version)) {
     throw Error('The config.xml should not contain a pre-released version. Please enter a released version.');
-  } 
+  }
 
   const configXml = path.join(directory, 'config.xml');
   const config: SnowConfig = await parse(configXml);
@@ -43,4 +44,4 @@ export async function updatePackage(id: string, directory: string) {
 
 export function configExists(directory: string): boolean {
   return fs.existsSync(path.join(directory, 'config.xml'));
-} 
+}
