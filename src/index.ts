@@ -12,9 +12,9 @@ export function commandLoader(program: any) {
   const loadPath = path.join(path.dirname(__filename), 'commands');
 
   // Loop though command files
-  fs.readdirSync(loadPath).filter(function (filename: string) {
+  fs.readdirSync(loadPath).filter((filename: string) => {
     return (/\.js$/.test(filename));
-  }).forEach(function (filename: string) {
+  }).forEach((filename: string) => {
     const name = filename.substr(0, filename.lastIndexOf('.'));
     const command = require(path.join(loadPath, filename));
 
