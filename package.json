@@ -15,6 +15,7 @@
     "colors": "^1.1.2",
     "commander": "^2.11.0",
     "semver": "^5.4.1",
+    "util.promisify": "^1.0.0",
     "xml2js": "^0.4.19"
   },
   "bin": {
@@ -42,8 +43,7 @@
     "sinon": "^4.0.1",
     "tmp": "0.0.33",
     "ts-node": "^3.3.0",
-    "typescript": "^2.5.3",
-    "util.promisify": "^1.0.0"
+    "typescript": "^2.5.3"
   },
   "nyc": {
     "include": [
