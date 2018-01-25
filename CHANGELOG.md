@@ -1,3 +1,9 @@
+# [1.2.2](https://bitbucket.org/ingicare/snow/branches/compare/v1.2.2..v1.2.1) (2018-01-26)
+
+### Features
+
+* **doc:** add documentation for the two new commands `get-package` and `get-version`
+
 # [1.2.1](https://bitbucket.org/ingicare/snow/branches/compare/v1.2.1..v1.2.0) (2018-01-25)
 
 ### Features
