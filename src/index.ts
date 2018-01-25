@@ -26,7 +26,16 @@ export function commandLoader(program: any) {
 
 commandLoader(commander);
 
-commander
+const cmd = commander
   .usage('<command> [options]')
-  .version(pack.version)
-  .parse(process.argv);
+  .version(pack.version);
+
+cmd.on('command:*', (params: string[]) => {
+  console.error(`Error : snow ${params[0]} is not a valid snow command. See 'snow --help'.`);
+});
+
+cmd.parse(process.argv);
+
+if (!cmd.args.length) {
+  cmd.help();
+}

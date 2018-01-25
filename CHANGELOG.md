@@ -1,3 +1,10 @@
+# [1.2.1](https://bitbucket.org/ingicare/snow/branches/compare/v1.2.1..v1.2.0) (2018-01-25)
+
+### Features
+
+* **no-cmd:** display help when no command is specified when calling snow
+* **unknown-cmd:** display an error message when the entered command is unknown
+
 # [1.2.0](https://bitbucket.org/ingicare/snow/branches/compare/v1.2.0..v1.1.1) (2018-01-24)
 
 ### Features
