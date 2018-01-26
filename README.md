@@ -1,9 +1,14 @@
 # Snow
 
-Simple cli for updating:
+Simple cli for :
 
-- the package id 
-- the version 
+- updating the package id in cordova config.xml file 
+
+- updating the version in cordova config.xml file 
+
+- getting the version from cordova config.xml file 
+
+- getting the package id from cordova config.xml file 
 
 in a cordova mobile repo
 
@@ -56,8 +61,35 @@ snow v <VERSION>
 
 This command will replace the version in your config.xml file with the specified VERSION.
 
+- For the package get :
 
-snow also accepts a ```--dir or -d``` option where ```-d``` stands for ```--dir```, which can be used to specify the directory path of the config.xml in case of it is not present in the current repo.  
+```
+snow get-package
+```
+
+or
+
+```
+snow gp
+```
+
+This command will return as an output the current package id present in the config.xml.
+
+- For the version get :
+
+```
+snow get-version
+```
+
+or
+
+```
+snow gv
+```
+
+This command will return as an output the current version present in the config.xml.
+
+snow also accepts (applicable to all commands listed above) a ```--dir or -d``` option where ```-d``` stands for ```--dir```, which can be used to specify the directory path of the config.xml in case of it is not present in the current repo.  
 
 Example :
 ```
