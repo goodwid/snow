@@ -1,3 +1,9 @@
+# [1.3.0](https://bitbucket.org/ingicare/snow/branches/compare/v1.3.0..v1.2.2) (2018-02-12)
+
+### Features
+
+* **app-name:** add the possibility to set the application name in config.xml with the new command `name`
+
 # [1.2.2](https://bitbucket.org/ingicare/snow/branches/compare/v1.2.2..v1.2.1) (2018-01-26)
 
 ### Features
