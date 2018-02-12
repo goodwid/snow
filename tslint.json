@@ -11,7 +11,9 @@
       true,
       "allow-leading-underscore"
     ],
-    "no-console": [false],
+    "no-console": [
+      false
+    ],
     "whitespace": [
       true,
       "check-branch",
@@ -20,6 +22,10 @@
       "check-module",
       "check-separator",
       "check-type"
+    ],
+    "max-line-length": [
+      true,
+      150
     ]
   }
 }

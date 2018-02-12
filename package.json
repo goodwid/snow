@@ -1,6 +1,6 @@
 {
   "name": "@ingicare/snow",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Updates the package id and/or the version in a cordova mobile repo",
   "main": "index.js",
   "scripts": {
@@ -43,7 +43,7 @@
     "sinon": "^4.0.1",
     "tmp": "0.0.33",
     "ts-node": "^3.3.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.7.1"
   },
   "nyc": {
     "include": [
