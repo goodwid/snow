@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "commonjs",
     "lib": ["dom", "es6"],
+    "skipLibCheck": true, // will be removed once dep @types/colors declaration file is fixed 
     "noImplicitAny": true,
     "strict": true,
     "allowUnusedLabels": false,
@@ -16,7 +17,7 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "../dist",
     "sourceMap": true,
-    "declaration": true
+    "declaration": true,
   },
   "exclude": [
     "node_modules",

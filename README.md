@@ -6,9 +6,12 @@ Simple cli for :
 
 - updating the version in cordova config.xml file 
 
+- updating the application name in cordova config.xml file
+
 - getting the version from cordova config.xml file 
 
 - getting the package id from cordova config.xml file 
+
 
 in a cordova mobile repo
 
@@ -35,31 +38,46 @@ npm install -g @ingicare/snow
 - For the package id update :
 
 ```
-snow package <ID>
+snow package <APP_IDENTIFIER>
 ```
 
 or
 
 ```
-snow p <ID>
+snow p <APP_IDENTIFIER>
 ```
 
-This command will replace the package id in your config.xml file with the specified ID.
+This command will replace the package id in your config.xml file with the specified APP_IDENTIFIER.
 
 
 - For the version update :
 
 ```
-snow version <VERSION>
+snow version <APP_VERSION>
 ```
 
 or
 
 ```
-snow v <VERSION>
+snow v <APP_VERSION>
 ```
 
-This command will replace the version in your config.xml file with the specified VERSION.
+This command will replace the version in your config.xml file with the specified APP_VERSION.
+
+
+- For the app name update :
+
+```
+snow name <APP_NAME>
+```
+
+or
+
+```
+snow n <APP_NAME>
+```
+
+This command will replace the application name in your config.xml file with the specified APP_NAME.
 
 - For the package get :
 

@@ -3,15 +3,21 @@ import * as xml2js from 'xml2js';
 
 // tslint:disable-next-line:no-implicit-dependencies
 import * as promisify from 'util.promisify';
-// tslint:disable-next-line:no-duplicate-imports
-import { convertableToString } from 'xml2js';
 
 const readFile = promisify(fs.readFile);
-const parseString = promisify(xml2js.parseString) as (d: convertableToString) => Promise<{}>;
 
 export async function parse(file: string): Promise<any> {
   const xml = await readFile(file, 'utf-8');
-  return parseString(xml);
+
+  return new Promise((resolve, reject) => {
+    xml2js.parseString(xml, { explicitArray: false }, (error, result) => {
+      if (error) {
+        reject(error);
+      }
+
+      resolve(result);
+    });
+  });
 }
 
 export function write(file: string, xml: object) {

@@ -1,6 +1,7 @@
 interface SnowConfig {
   widget: {
-    $: WidgetAtr
+    $: WidgetAtr;
+    name: string;
   };
 }
 

@@ -43,7 +43,7 @@
     "sinon": "^4.0.1",
     "tmp": "0.0.33",
     "ts-node": "^3.3.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.7.1"
   },
   "nyc": {
     "include": [

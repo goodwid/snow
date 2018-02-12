@@ -34,6 +34,13 @@ export async function updatePackage(id: string, directory: string) {
   write(configXml, config);
 }
 
+export async function updateName(name: string, directory: string) {
+  const configXml = getConfigXmlPath(directory);
+  const config: SnowConfig = await parse(configXml);
+  config.widget.name = name;
+  write(configXml, config);
+}
+
 export function configExists(file: string): boolean {
   return fs.existsSync(file);
 }
