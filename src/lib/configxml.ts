@@ -57,6 +57,12 @@ export async function getPackageId(directory: string) {
   return configFile.widget.$.id;
 }
 
+export async function getAppName(directory: string) {
+  const configFile: SnowConfig = await parse(getConfigXmlPath(directory));
+
+  return configFile.widget.name;
+}
+
 function getConfigXmlPath(directory: string) {
   const filePath = path.join(directory, 'config.xml');
 
