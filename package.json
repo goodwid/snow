@@ -1,6 +1,6 @@
 {
   "name": "@ingicare/snow",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Updates the package id and/or the version in a cordova mobile repo",
   "main": "index.js",
   "scripts": {
