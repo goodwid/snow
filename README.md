@@ -12,6 +12,7 @@ Simple cli for :
 
 - getting the package id from cordova config.xml file 
 
+- getting the application name from cordova config.xml file 
 
 in a cordova mobile repo
 
@@ -106,6 +107,21 @@ snow gv
 ```
 
 This command will return as an output the current version present in the config.xml.
+
+
+- For the name get :
+
+```
+snow get-name
+```
+
+or
+
+```
+snow gn
+```
+
+This command will return as an output the current app name present in the config.xml.
 
 snow also accepts (applicable to all commands listed above) a ```--dir or -d``` option where ```-d``` stands for ```--dir```, which can be used to specify the directory path of the config.xml in case of it is not present in the current repo.  
 
