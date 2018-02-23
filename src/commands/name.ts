@@ -19,8 +19,8 @@ export function cmd(program: any) {
 
       try {
         await updateName(appName, dir);
-        console.log(colors.green(`You are ready to go !\nThe config.xml was updated with new package
-         identifier `) + colors.rainbow(appName));
+        console.log(colors.green(`You are ready to go !\nThe config.xml was updated with new app
+         name `) + colors.rainbow(appName));
       } catch (e) {
         console.log(colors.red.bold(e.message));
       }
