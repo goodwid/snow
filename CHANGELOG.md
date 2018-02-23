@@ -1,3 +1,9 @@
+# [1.4.1](https://bitbucket.org/ingicare/snow/branches/compare/v1.4.1..v1.4.0) (2018-02-23)
+
+### Bugfixes
+
+* **app-name:** fix the success message after running the command `name`
+
 # [1.4.0](https://bitbucket.org/ingicare/snow/branches/compare/v1.4.0..v1.3.0) (2018-02-22)
 
 ### Features
