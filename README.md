@@ -18,20 +18,8 @@ in a cordova mobile repo
 
 ## Installing
 
-First, make sure you have `npm` configured so that it uses our internal nexus for the `@ingicare` scope:
-
 ```
-npm config set @ingicare:registry https://nexus.ingicare.com/repository/npm-internal/
-```
-
-You also need to login into our nexus for this scope:
-
-```
-npm login --scope=@ingicare
-```
-
-```
-npm install -g @ingicare/snow
+npm install -g make-it-snow
 ```
 
 ## Usage

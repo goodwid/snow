@@ -1,5 +1,5 @@
 {
-  "name": "@ingicare/snow",
+  "name": "make-it-snow",
   "version": "1.4.1",
   "description": "Updates the package id and/or the version in a cordova mobile repo",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "watch-test": "mocha --watch --watch-extensions ts --recursive --require ts-node/register 'test/**/*.ts'"
   },
   "keywords": [],
-  "author": "Maryam Louati <mlouati@ingicare.com>",
+  "author": "Maryam Louati <maryamlouati@outlook.com>",
   "dependencies": {
     "colors": "^1.1.2",
     "commander": "^2.13.0",
@@ -21,13 +21,10 @@
   "bin": {
     "snow": "index.js"
   },
-  "publishConfig": {
-    "registry": "https://nexus.ingicare.com/repository/npm-internal/"
-  },
   "devDependencies": {
     "@types/chai": "*",
     "@types/chai-as-promised": "*",
-    "@types/colors": "*",
+    "@types/colors": "1.1.3",
     "@types/commander": "*",
     "@types/mocha": "*",
     "@types/node": "6.0.96",
