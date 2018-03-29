@@ -9,7 +9,17 @@
     "test": "nyc mocha --recursive --require ts-node/register 'test/**/*.ts'",
     "watch-test": "mocha --watch --watch-extensions ts --recursive --require ts-node/register 'test/**/*.ts'"
   },
-  "keywords": [],
+  "keywords": [
+    "cordova",
+    "config",
+    "config.xml",
+    "ionic",
+    "phonegap",
+    "version",
+    "packageid",
+    "update",
+    "get"
+  ],
   "author": "Maryam Louati <maryamlouati@outlook.com>",
   "dependencies": {
     "colors": "^1.1.2",
