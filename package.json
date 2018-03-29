@@ -1,6 +1,6 @@
 {
   "name": "make-it-snow",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Updates the package id and/or the version in a cordova mobile repo",
   "main": "index.js",
   "scripts": {
