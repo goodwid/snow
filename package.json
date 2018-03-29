@@ -1,6 +1,6 @@
 {
   "name": "make-it-snow",
-  "version": "1.4.2",
+  "version": "1.4.1",
   "description": "Updates the package id and/or the version in a cordova mobile repo",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
     "start": "npm run build && tsc -p src -w",
     "test": "nyc mocha --recursive --require ts-node/register 'test/**/*.ts'",
     "watch-test": "mocha --watch --watch-extensions ts --recursive --require ts-node/register 'test/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maryiam/snow.git"
   },
   "keywords": [
     "cordova",
